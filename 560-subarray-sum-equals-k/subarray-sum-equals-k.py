@@ -1,10 +1,5 @@
-class Solution(object):
-    def subarraySum(self, nums, k):
-        """
-        :type nums: List[int]
-        :type k: int
-        :rtype: int
-        """
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
         csum = 0
         subcnt = 0
         seen = {0:1}
@@ -15,6 +10,4 @@ class Solution(object):
                 subcnt += seen[req]
             seen[csum] = seen.get(csum,0) + 1
         return subcnt
-
-
         
